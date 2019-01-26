@@ -1,0 +1,17 @@
+int function_1(int a) {
+return a + 3;
+}
+
+float function_2(int b)
+{
+int c;
+c = b * 3 ;
+if(c == 12) return 3.5;
+else return 1.2;
+}
+
+float functionMain(int b)
+{
+int a = b;
+return function_2(function_1((2 * b) + 3)));
+}

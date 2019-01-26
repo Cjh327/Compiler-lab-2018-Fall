@@ -1,0 +1,31 @@
+struct Test_Product{
+    int name;
+    float type,
+}p[10];
+
+float Test_Function(struct Test_Product test) {
+    if(test.name >= 3 || test.type == 2.3) {
+        return 3.2;
+    } else{
+        return test.type /2 * 7 + test,type;
+    }
+}
+
+int main()
+{
+    int name[10];
+    float type[10];
+    int result;
+    int i, N;
+    while(i ! = N){
+        p[i].name = name[i];
+        p[i].type = (type[i * 3] - 2.2) / 2.3;
+        i = i + 1;
+    }
+
+    while(i == 0) {
+        N = N + p[i].name;
+        p[i].type = p[1 0].type * p[9].type;
+    }
+    return N;
+}

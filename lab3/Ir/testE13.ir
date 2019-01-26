@@ -1,0 +1,59 @@
+FUNCTION calculate :
+PARAM v1
+v2 := #0
+v3 := #0
+v4 := #50
+LABEL label1 :
+IF v3 >= v4 GOTO label2
+t11 := v3 * #8
+t10 := t11 + #4
+t9 := v1 + t10
+v2 := v2 + *t9
+v3 := v3 + #1
+GOTO label1
+LABEL label2 :
+t18 := v1 + #400
+t19 := v2 / v4
+*t18 := t19
+t24 := v2 / v4
+RETURN t24
+FUNCTION main :
+DEC v5 4040
+v6 := #0
+v7 := #0
+v8 := #50
+v9 := #10
+LABEL label3 :
+IF v6 >= v9 GOTO label4
+v7 := #0
+LABEL label5 :
+IF v7 >= v8 GOTO label6
+t42 := v6 * #404
+t41 := t42 + #0
+t45 := v7 * #8
+t40 := t41 + t45
+t39 := t40 + #4
+t37 := &v5 + t39
+t47 := v7 * #5
+t38 := v6 + t47
+*t37 := t38
+v7 := v7 + #1
+GOTO label5
+LABEL label6 :
+v6 := v6 + #1
+GOTO label3
+LABEL label4 :
+v7 := #0
+v6 := #0
+LABEL label7 :
+IF v6 >= v9 GOTO label8
+t69 := v6 * #404
+t68 := &v5 + t69
+ARG t68
+t67 := CALL calculate
+v7 := v7 + t67
+v6 := v6 + #1
+GOTO label7
+LABEL label8 :
+WRITE v7
+RETURN #0

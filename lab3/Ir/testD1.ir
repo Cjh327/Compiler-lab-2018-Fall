@@ -1,0 +1,111 @@
+FUNCTION process :
+PARAM v1
+v2 := #3
+v2 := #36
+t28 := v1 * #321
+t26 := t28 * #2
+t27 := v1 * v2
+t24 := t26 + t27
+t22 := t24 - v1
+t23 := v2 * v1
+t20 := t22 + t23
+t21 := v2 * v2
+t18 := t20 + t21
+t16 := t18 + v1
+t14 := t16 + v1
+t12 := t14 - #23
+v2 := t12 + #45
+t50 := v2 / #3
+t48 := t50 + #336
+t56 := v1 * #12
+t49 := t56 / #4
+t46 := t48 - t49
+t44 := t46 - #60
+t62 := v2 / #12
+t45 := t62 * #24
+t42 := t44 + t45
+t40 := t42 + #36
+v2 := t40 + #1
+t72 := v1 + #24
+v2 := t72 + #1
+RETURN v2
+FUNCTION main :
+v3 := #13
+v4 := #20
+v5 := #15
+t106 := v3 + v4
+t105 := t106 + v5
+v6 := t105
+t111 := v3 * v4
+t112 := v5 / #2
+t110 := t111 + t112
+v7 := t110
+t118 := v3 - v4
+t117 := t118 - v5
+v8 := t117
+v9 := #42
+v10 := #0
+t130 := v3 + v4
+t128 := t130 + v5
+t126 := t128 + #2000
+v8 := t126 - v8
+LABEL label1 :
+t136 := v3 + v4
+IF t136 >= v8 GOTO label2
+t149 := v10 * #12
+t146 := v9 + t149
+t144 := t146 + #4
+t142 := t144 + #5
+v9 := t142 + #2
+ARG v8
+t160 := CALL process
+t161 := #2 * v3
+t158 := t160 + t161
+t156 := t158 - v8
+t157 := v5 * v6
+v11 := t156 + t157
+v10 := v10 + v10
+v10 := v10 + v10
+v10 := v10 + v10
+v10 := v10 + v10
+v10 := v10 + v10
+v12 := v10 + #3
+v12 := v12 - #1
+v12 := v12 + #3
+v12 := v12 - #6
+ARG v3
+t205 := CALL process
+t211 := v3 + #3
+t209 := t211 - #2
+t208 := t209 - #1
+ARG t208
+t206 := CALL process
+IF t205 != t206 GOTO label3
+t217 := v8 - #2
+v8 := t217 + #1
+LABEL label3 :
+t223 := v3 + #2
+v3 := t223 + #1
+GOTO label1
+LABEL label2 :
+v12 := v9 - #12
+LABEL label4 :
+IF v12 >= v9 GOTO label5
+v8 := #58 + v3
+v11 := v9 - #12
+v12 := v12 + #1
+v11 := v9
+v10 := v3 + v4
+v5 := v3 + v4
+GOTO label4
+LABEL label5 :
+WRITE v8
+v3 := v3 + v4
+v4 := v3 + v4
+v5 := v3 + v4
+v8 := v3 + v4
+v11 := v3 + v4
+t283 := v5 + v8
+t282 := t283 + v11
+WRITE t282
+RETURN #0

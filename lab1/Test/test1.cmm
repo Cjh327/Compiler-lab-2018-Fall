@@ -1,0 +1,6 @@
+int main()
+{
+	int i = 1;
+	int j = 2;
+	float k = 1.2345e10;
+}

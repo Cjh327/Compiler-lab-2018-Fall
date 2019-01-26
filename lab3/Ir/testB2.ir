@@ -1,0 +1,143 @@
+FUNCTION countSort :
+DEC v1 20
+DEC v2 40
+DEC v3 20
+v4 := #0
+LABEL label1 :
+IF v4 >= #10 GOTO label2
+t7 := v4 * #4
+t5 := &v2 + t7
+*t5 := #0
+v4 := v4 + #1
+GOTO label1
+LABEL label2 :
+v4 := #0
+LABEL label3 :
+IF v4 >= #5 GOTO label4
+t19 := v4 * #4
+t17 := &v1 + t19
+READ t18
+*t17 := t18
+t25 := v4 * #4
+t24 := &v1 + t25
+t23 := *t24 * #4
+t21 := &v2 + t23
+t31 := v4 * #4
+t30 := &v1 + t31
+t29 := *t30 * #4
+t27 := &v2 + t29
+t22 := *t27 + #1
+*t21 := t22
+v4 := v4 + #1
+GOTO label3
+LABEL label4 :
+v4 := #1
+LABEL label5 :
+IF v4 >= #10 GOTO label6
+t43 := v4 * #4
+t41 := &v2 + t43
+t47 := v4 * #4
+t45 := &v2 + t47
+t50 := v4 - #1
+t49 := t50 * #4
+t46 := &v2 + t49
+t42 := *t45 + *t46
+*t41 := t42
+v4 := v4 + #1
+GOTO label5
+LABEL label6 :
+v4 := #0
+LABEL label7 :
+IF v4 >= #5 GOTO label8
+t69 := v4 * #4
+t68 := &v1 + t69
+t67 := *t68 * #4
+t65 := &v2 + t67
+t64 := *t65 - #1
+t63 := t64 * #4
+t61 := &v3 + t63
+t71 := v4 * #4
+t62 := &v1 + t71
+*t61 := *t62
+t77 := v4 * #4
+t76 := &v1 + t77
+t75 := *t76 * #4
+t73 := &v2 + t75
+t83 := v4 * #4
+t82 := &v1 + t83
+t81 := *t82 * #4
+t79 := &v2 + t81
+t74 := *t79 - #1
+*t73 := t74
+v4 := v4 + #1
+GOTO label7
+LABEL label8 :
+v4 := #0
+LABEL label9 :
+IF v4 >= #5 GOTO label10
+t94 := v4 * #4
+t93 := &v3 + t94
+WRITE *t93
+v4 := v4 + #1
+GOTO label9
+LABEL label10 :
+RETURN #0
+FUNCTION bubbleSort :
+DEC v5 20
+v6 := #0
+LABEL label11 :
+IF v6 >= #5 GOTO label12
+t108 := v6 * #4
+t106 := &v5 + t108
+READ t107
+*t106 := t107
+v6 := v6 + #1
+GOTO label11
+LABEL label12 :
+v7 := #1
+LABEL label13 :
+IF v7 != #1 GOTO label14
+v7 := #0
+v6 := #1
+LABEL label15 :
+IF v6 >= #5 GOTO label16
+t126 := v6 * #4
+t124 := &v5 + t126
+t129 := v6 - #1
+t128 := t129 * #4
+t125 := &v5 + t128
+IF *t124 >= *t125 GOTO label17
+v7 := #1
+t137 := v6 - #1
+t136 := t137 * #4
+t135 := &v5 + t136
+v8 := *t135
+t143 := v6 - #1
+t142 := t143 * #4
+t140 := &v5 + t142
+t146 := v6 * #4
+t141 := &v5 + t146
+*t140 := *t141
+t150 := v6 * #4
+t148 := &v5 + t150
+*t148 := v8
+LABEL label17 :
+v6 := v6 + #1
+GOTO label15
+LABEL label16 :
+GOTO label13
+LABEL label14 :
+v6 := #0
+LABEL label18 :
+IF v6 >= #5 GOTO label19
+t161 := v6 * #4
+t160 := &v5 + t161
+WRITE *t160
+v6 := v6 + #1
+GOTO label18
+LABEL label19 :
+RETURN #0
+FUNCTION main :
+t169 := CALL countSort
+t170 := CALL bubbleSort
+RETURN #0

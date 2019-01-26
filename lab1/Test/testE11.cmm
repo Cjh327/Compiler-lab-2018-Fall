@@ -1,0 +1,7 @@
+int test_for_wrong_oct_number()
+{
+    int _c_o_n_=003575;
+    int _d_n=1836;
+    int _w_o_n_ = 01836;
+    int _c_o_n2 = 00001266;
+}

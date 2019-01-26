@@ -1,0 +1,7 @@
+int func_test()
+{
+    int _dec_ = 312;
+    int _oct_ = 0733;
+    int _dhex_ = 0xC612D+_oct_;
+    int _result_ = -_dhex_+_oct_*(_dec_-0X3aB);
+}

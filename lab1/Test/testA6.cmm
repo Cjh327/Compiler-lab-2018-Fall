@@ -1,0 +1,9 @@
+int Array_Def()
+{
+    int i, a[10][2],b;
+    i=0;
+    while (i < b){
+        a[i][3][3+1,2]=b;
+        a[5][1]=i;
+    }
+}

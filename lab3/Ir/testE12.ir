@@ -1,0 +1,52 @@
+FUNCTION main :
+DEC v1 80
+v5 := #10
+v2 := #0
+LABEL label1 :
+IF v2 >= v5 GOTO label2
+t9 := v2 * #8
+t8 := t9 + #0
+t6 := &v1 + t8
+*t6 := #10
+t14 := v2 * #8
+t13 := t14 + #4
+t11 := &v1 + t13
+*t11 := v2
+v2 := v2 + #1
+GOTO label1
+LABEL label2 :
+v2 := #0
+v4 := #0
+LABEL label3 :
+IF v2 >= v5 GOTO label4
+v3 := #0
+t33 := v2 * #8
+t32 := t33 + #4
+t31 := &v1 + t32
+v4 := v4 + *t31
+LABEL label5 :
+IF v3 >= v5 GOTO label6
+t40 := v2 * #8
+t39 := t40 + #0
+t37 := &v1 + t39
+t45 := v2 * #8
+t44 := t45 + #0
+t42 := &v1 + t44
+t50 := v3 * #8
+t49 := t50 + #4
+t48 := &v1 + t49
+t43 := v4 * *t48
+t38 := *t42 + t43
+*t37 := t38
+v3 := v3 + #1
+GOTO label5
+LABEL label6 :
+v2 := v2 + #1
+GOTO label3
+LABEL label4 :
+t63 := v5 - #1
+t62 := t63 * #8
+t61 := t62 + #0
+t60 := &v1 + t61
+WRITE *t60
+RETURN #0

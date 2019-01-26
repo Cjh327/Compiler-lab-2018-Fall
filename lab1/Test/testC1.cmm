@@ -1,0 +1,17 @@
+struct Test_type{
+    int id;
+    float value;
+}test1;
+
+int main(){
+    struct Test_type_type{
+        struct Test_type nested1;
+        struct Test_type_nested{
+            int idd;
+        }nested2;
+    }type;
+
+    type.nested1 = test1;
+    type.nested2.idd = type.nested.id;
+    return type.nested2.idd * type.nested1.id;
+}

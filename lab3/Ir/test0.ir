@@ -1,0 +1,9 @@
+FUNCTION main :
+DEC v1 48
+t5 := v2 * #24
+t4 := t5 + #4
+t8 := v4 * #4
+t3 := t4 + t8
+t1 := &v1 + t3
+*t1 := #1
+RETURN #0

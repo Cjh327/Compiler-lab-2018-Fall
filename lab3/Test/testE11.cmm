@@ -1,0 +1,12 @@
+struct Product{
+    int type;
+    int name;
+};
+
+int main () {
+    struct Product cola;
+    cola.type = read();
+    cola.name = 3;
+    write(cola.type+cola.name);
+    return 0;
+}

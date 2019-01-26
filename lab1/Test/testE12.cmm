@@ -1,0 +1,8 @@
+int test_for_wrong_dhex_number()
+{
+    int xF245 = 0;
+    int _c_h_n_ = 0xf369;
+  int _w_h_n_ = 0xFG369;
+    int _w_h_n2_=0xx245;
+    int _c_n_h_n = xF245;
+}

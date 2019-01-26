@@ -1,0 +1,99 @@
+FUNCTION trap :
+v1 := #0
+v2 := #0
+v3 := #0
+v4 := #0
+v5 := #0
+v6 := #12
+v7 := #0
+DEC v8 48
+LABEL label1 :
+IF v3 >= v6 GOTO label2
+t12 := v3 * #4
+t10 := &v8 + t12
+READ t11
+*t10 := t11
+v3 := v3 + #1
+GOTO label1
+LABEL label2 :
+v3 := #0
+LABEL label3 :
+IF v3 >= v6 GOTO label4
+t24 := v3 * #4
+t22 := &v8 + t24
+IF *t22 != #0 GOTO label4
+v3 := v3 + #1
+GOTO label3
+LABEL label4 :
+IF v3 < v6 GOTO label5
+RETURN #0
+LABEL label5 :
+t36 := v3 * #4
+t35 := &v8 + t36
+v1 := *t35
+v2 := v3
+v5 := #0
+v3 := v3 + #1
+LABEL label6 :
+IF v3 >= v6 GOTO label7
+t50 := v3 * #4
+t48 := &v8 + t50
+IF *t48 >= v1 GOTO label8
+t58 := v3 * #4
+t57 := &v8 + t58
+t55 := v1 - *t57
+v5 := v5 + t55
+GOTO label9
+LABEL label8 :
+v4 := v4 + v5
+t66 := v3 * #4
+t65 := &v8 + t66
+v1 := *t65
+v2 := v3
+v5 := #0
+LABEL label9 :
+v3 := v3 + #1
+GOTO label6
+LABEL label7 :
+v5 := #0
+v7 := #0
+v3 := v6 - #1
+LABEL label10 :
+IF v3 <= v2 GOTO label11
+t88 := v3 * #4
+t86 := &v8 + t88
+IF *t86 != #0 GOTO label11
+v3 := v3 - #1
+GOTO label10
+LABEL label11 :
+t96 := v3 * #4
+t95 := &v8 + t96
+v7 := *t95
+v3 := v3 - #1
+LABEL label12 :
+IF v3 <= v2 GOTO label13
+t106 := v3 * #4
+t104 := &v8 + t106
+IF *t104 >= v7 GOTO label14
+t114 := v3 * #4
+t113 := &v8 + t114
+t111 := v7 - *t113
+v5 := v5 + t111
+GOTO label15
+LABEL label14 :
+v4 := v4 + v5
+t122 := v3 * #4
+t121 := &v8 + t122
+v7 := *t121
+v5 := #0
+LABEL label15 :
+v3 := v3 - #1
+GOTO label12
+LABEL label13 :
+t131 := v4 + v5
+RETURN t131
+FUNCTION main :
+t134 := CALL trap
+v9 := t134
+WRITE v9
+RETURN #0

@@ -1,0 +1,27 @@
+/*****
+//@Start
+~^^^^@#$%@#%^
+**/
+/*
+// @param int a
+/*
+int i
+*/
+int test(int a){
+    return a * /**?jj\\\\/ /////// */ 3;
+}
+/***@Override//*/
+int method() {
+    int i = 3;//\/*/\/\/\/\/\/\/\//// i = i +1;
+    int sum // = 12;
+    /*^_^*/ = 3;
+    while(i <= /*test run!*/3) {
+    sum /*blast */= sum + i;
+    i = i * 2;
+    /* TODO
+    */
+    }
+    test/*(*/(sum); // should be executed
+    return /*-1;*/sum/**i -1 +2;*/;
+}
+/* \***//*\*end of function/*\*/

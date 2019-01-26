@@ -1,0 +1,25 @@
+FUNCTION main :
+READ v1
+READ v2
+t7 := v2 / #2
+t6 := t7 * #2
+IF v2 != t6 GOTO label1
+v3 := #1
+GOTO label2
+LABEL label1 :
+v3 := v1
+LABEL label2 :
+v2 := v2 / #2
+LABEL label3 :
+IF v2 <= #0 GOTO label4
+v1 := v1 * v1
+t27 := v2 / #2
+t26 := t27 * #2
+IF v2 == t26 GOTO label5
+v3 := v3 * v1
+LABEL label5 :
+v2 := v2 / #2
+GOTO label3
+LABEL label4 :
+WRITE v3
+RETURN #0

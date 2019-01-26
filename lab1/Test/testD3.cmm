@@ -1,0 +1,27 @@
+/*a comment*/
+//also
+//aaa//
+/******
+asda
+******
+///\\\
+***/
+int a,b;
+/***
+*main
+* //ss
+**/
+int main(){
+    //int a,b
+    ///*\/
+    int c;
+    c=a;
+    b=a+c+ //adaf;
+    /*dfsaas*/b;
+    if (c<=b){//b>adfaads(//\\//*
+    //\\*//\\*//\\/.///\\\*/
+        return c;
+    }else
+
+        return b;
+}
